@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  /* background-image: url("clouds.jpg");
+  background-size: cover;
+  background-attachment: fixed; */
+  background: rgb(223, 255, 230);
+  background: radial-gradient(
+    circle,
+    rgba(223, 255, 230, 1) 0%,
+    rgba(29, 107, 184, 1) 100%
+  );
+
+  /* min-height: 100vh; */
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  /* margin: 3rem; */
+  max-width: 80vw;
   min-height: 100vh;
+  border-radius: 10px;
+}
+.container > h1 {
+  text-align: center;
+  color: white;
+  font-size: 78px;
+}
+
+.container > h2 {
+  text-align: center;
+  color: #ffc824;
+  font-size: 22px;
+  padding-bottom: 50px;
+}
+.links {
+  max-width: 500px;
+  height: 80px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  padding: 1rem;
+  text-align: center;
 }
+
+.card h4 {
+  word-spacing: 0.1rem;
+  padding: 0.5rem;
+}
+
+.card img {
+  position: relative;
+  width: 100%;
+}
+
+.dummycard {
+  margin: 1rem;
+  background-color: rgba(255, 200, 36, 0.2);
+}
+
+.figure {
+  position: relative;
+  /* width: 360px; can be omitted for a regular non-lazy image */
+  max-width: 100%;
+}
+.figure img.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.figure:hover img.image-hover {
+  opacity: 1;
+}
+
+.experience {
+  display: flex;
+
+  height: 50vh;
+  background-color: rgba(255, 200, 36, 0.2);
+  margin: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.contact {
+  display: flex;
+  height: 50vh;
+  background-color: rgb(255, 200, 36, 0.2);
+  margin: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+/* .experience > h2 {
+  margin: auto 0;
+}
+
+.contact > h2 {
+  padding: auto 0;
+} */
